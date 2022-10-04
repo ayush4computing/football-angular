@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row matches-title text-center my-5">
+       <p> Matches</p>
+    </div>
+    <div class="row">
+        <div class="row match-rows mx-auto my-2" *ngFor="let m of matches" (click)="viewMatchDetails(m.id)">
+            <p class="my-auto py-2">{{m.teams | teamsPipe}}</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="row my-5 ">
+            <button type="button" class="btn btn-danger mx-auto" routerLink='/add'>Add Match</button>
+        </div>
+    </div>
+</div>

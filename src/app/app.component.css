@@ -1,0 +1,11 @@
+.navbar{
+    background-color: #282C34;
+    border-bottom: #12897B 2px solid;
+}
+
+.nav-item{
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 600;
+}

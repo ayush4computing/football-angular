@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row register-title text-center my-5">
+        <p> Register</p>
+     </div>
+     <div class="row form-box mx-auto">
+         <div class="col">
+            <form [formGroup]="registerForm" (ngSubmit)= "onSubmit()">
+                <!-- First name input box -->
+                <div class="row mx-5 mt-5">
+                    <input class="input-box mx-auto form-control" 
+                            type="text" 
+                            formControlName="firstName" 
+                            placeholder="First Name"
+                            [ngClass]="{'is-invalid':registerForm.controls.firstName.touched && registerForm.controls.firstName.errors}">
+                            <div *ngIf="registerForm.controls.firstName.touched && registerForm.controls.firstName.errors" class="text-danger">
+                                <div *ngIf="registerForm.controls.firstName.touched && registerForm.controls.firstName.errors.required">
+                                    <p style="margin-left: 0;">First Name is required.</p>
+                                </div>
+                            </div>
+
+                </div>
+                <!-- Last Name Iput box -->
+                <div class="row mx-5 mt-4">
+                    <input class="input-box mx-auto form-control" 
+                            type="text" 
+                            formControlName="lastName" 
+                            placeholder="Last Name"
+                            [ngClass]="{'is-invalid':registerForm.controls.lastName.touched && registerForm.controls.lastName.errors}">
+                            <div *ngIf="registerForm.controls.lastName.touched && registerForm.controls.lastName.errors" class="text-danger">
+                                <div *ngIf="registerForm.controls.lastName.touched && registerForm.controls.lastName.errors.required">
+                                    <p style="margin-left: 0;">Last Name is required.</p>
+                                </div>
+                            </div>
+
+                </div>
+                <!-- Position dropdown list -->
+                <div class="row mx-5 mt-4">
+                    <select class="custom-select my-select mx-auto form-control" formControlName="position" [ngClass]="{'is-invalid':registerForm.controls.position.touched && registerForm.controls.position.errors}">
+                        <option value="">Choose Position</option>
+                        <option *ngFor="let pos of positions" [ngValue]="pos">{{pos}} </option>
+                    </select>
+                    <div *ngIf="registerForm.controls.position.touched && registerForm.controls.position.errors" class="text-danger">
+                        <div *ngIf="registerForm.controls.position.touched && registerForm.controls.position.errors.required">
+                            <p style="margin-left: 0;">position is required.</p>
+                        </div>
+                    </div>
+                 </div>
+
+                <!-- Jersey Number input box -->
+                <div class="row mx-5 mt-4">
+                    <input class=" mx-auto jersey-number form-control" 
+                            type="text" 
+                            formControlName="jNumber" 
+                            placeholder="Jersey Number"
+                            [ngClass]="{'is-invalid':registerForm.controls.jNumber.touched && registerForm.controls.jNumber.errors}">
+                            <div *ngIf="registerForm.controls.jNumber.touched && registerForm.controls.jNumber.errors" class="text-danger">
+                                <div *ngIf="registerForm.controls.jNumber.touched && registerForm.controls.jNumber.errors.required">
+                                    <p style="margin-left: 0;">Number is required.</p>
+                                </div>
+                                <div *ngIf="registerForm.controls.jNumber.touched && registerForm.controls.jNumber.errors.pattern">
+                                    <p style="margin-left: 0;">should be number only</p>
+                                </div>
+                            </div>
+                </div>
+
+                <!-- Submit button -->
+                <div class="row my-5 form-group ">
+                    <button class="btn btn-danger mx-auto" [disabled]="registerForm.controls.jNumber.errors || registerForm.controls.position.errors || registerForm.controls.lastName.errors || registerForm.controls.firstName.errors">Add Player</button>
+                </div>
+              </form>
+         </div>
+         
+     </div>
+</div>
+

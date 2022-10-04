@@ -1,0 +1,31 @@
+.card-text{
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card-title{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.card{
+    background-color: #12897B;
+    
+}
+
+.btn{
+    width: 200px;
+}
+
+.row{
+    margin-right: 0 !important;
+}
+.player-title{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Poppins';
+    width: 100%;
+    color: #fff;
+}
+

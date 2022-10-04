@@ -1,0 +1,34 @@
+.match-score{
+    font-family: 'Poppins';
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 80px;
+}
+.match-date,.match-loc,.match-result{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+.match-details{
+    background-color:#12897B;
+    border-radius: 10px;
+}
+.players-title{
+    margin-top: 30px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.player-name{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    background-color: #BD324C;
+    border-radius: 10px;
+    width: 30%;
+}

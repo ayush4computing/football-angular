@@ -1,0 +1,22 @@
+.matches-title{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Poppins';
+    width: 100%;
+    color: #fff;
+}
+
+.match-rows{
+    background-color: #12897B;
+    width: 70%;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn{
+    width: 200px;
+}

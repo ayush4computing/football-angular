@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="row add-player-title text-center my-5">
+        <p> Add Match</p>
+     </div>
+     <div class="row form-box mx-auto">
+         <div class="col">
+            <form [formGroup]="addMatchForm" (ngSubmit) = "addMatch()">
+                <!-- Teams Name input box -->
+                <div class="row mx-5 mt-5">
+                    <input class="input-box mx-auto form-control" 
+                            type="text" 
+                            formControlName="teamNames" 
+                            placeholder="Enter 2 Team Names separated by comma"
+                            [ngClass]="{'is-invalid':addMatchForm.controls.teamNames.touched && addMatchForm.controls.teamNames.errors}">
+                            <div *ngIf="addMatchForm.controls.teamNames.touched && addMatchForm.controls.teamNames.errors" class="text-danger">
+                                <div *ngIf="addMatchForm.controls.teamNames.touched && addMatchForm.controls.teamNames.errors.required">
+                                    <p style="margin-left: 0;">Teams Name is required.</p>
+                                </div>
+                            </div>
+                </div>
+                <!-- Match location input box -->
+                <div class="row mx-5 mt-4">
+                    <input class="input-box mx-auto form-control"
+                            type="text" 
+                            formControlName="place" 
+                            placeholder="Match Location"
+                            [ngClass]="{'is-invalid':addMatchForm.controls.place.touched && addMatchForm.controls.place.errors}">
+                            <div *ngIf="addMatchForm.controls.place.touched && addMatchForm.controls.place.errors" class="text-danger">
+                                <div *ngIf="addMatchForm.controls.place.touched && addMatchForm.controls.place.errors.required">
+                                    <p style="margin-left: 0;">Location is required.</p>
+                                </div>
+                            </div>
+                </div>
+                <!-- Match Date input box -->
+                <div class="row mx-5 mt-4">
+                    <input class="input-box mx-auto form-control" 
+                            type="text" 
+                            formControlName="datetime" 
+                            placeholder="Enter Date YYYY-MM-DD"
+                            [ngClass]="{'is-invalid':addMatchForm.controls.datetime.touched && addMatchForm.controls.datetime.errors}">
+                            <div *ngIf="addMatchForm.controls.datetime.touched && addMatchForm.controls.datetime.errors" class="text-danger">
+                                <div *ngIf="addMatchForm.controls.datetime.touched && addMatchForm.controls.datetime.errors.required">
+                                    <p style="margin-left: 0;">Date is required.</p>
+                                </div>
+                            </div>
+                </div>
+                <!-- Match score input box -->
+                <div class="row mx-5 mt-4">
+                    <input class="input-box mx-auto form-control" 
+                            type="text" 
+                            formControlName="score" 
+                            placeholder="Enter Score of both team separated by -"
+                            [ngClass]="{'is-invalid':addMatchForm.controls.score.touched && addMatchForm.controls.score.errors}">
+                            <div *ngIf="addMatchForm.controls.score.touched && addMatchForm.controls.score.errors" class="text-danger">
+                                <div *ngIf="addMatchForm.controls.score.touched && addMatchForm.controls.score.errors.required">
+                                    <p style="margin-left: 0;">Score is required.</p>
+                                </div>
+                            </div>
+                </div>
+                
+                <!-- Match result dropdown list -->
+                <div class="row mx-5 mt-4">
+                           <select class="custom-select my-select mx-auto form-control" formControlName="result" [ngClass]="{'is-invalid':submitted && addMatchForm.controls.result.errors}">
+                                <option value="">Choose Result</option>
+                                <option *ngFor="let res of results" [ngValue]="res">{{res}} </option>
+                            </select>
+                            <div *ngIf="addMatchForm.controls.result.touched && addMatchForm.controls.result.errors" class="text-danger">
+                                <div *ngIf="addMatchForm.controls.result.touched && addMatchForm.controls.result.errors.required">
+                                    <p style="margin-left: 0;">Result is required.</p>
+                                </div>
+                            </div>
+                 </div>
+
+                 <!-- Math players checkboxes -->
+                 <div class="row mx-auto mt-4" style="width: 70%;">
+
+                        <div class="form-check form-check-inline" *ngFor="let p of players">
+                            <input class="mx-2 form-check-input form-control" type="checkbox" id="playersCheckbox" value="p.id" formControlName="players" [ngClass]="{'is-invalid':submitted && addMatchForm.controls.players.errors}">
+                            <label class="form-check-label" for="playersCheckbox" style="color: #fff;">{{p.firstName}} &nbsp; {{p.lastname}}</label>
+                        </div>
+                        <div *ngIf="addMatchForm.controls.players.touched && addMatchForm.controls.players.errors" class="text-danger">
+                            <div *ngIf="addMatchForm.controls.players.touched && addMatchForm.controls.players.errors.required">
+                                <p style="margin-left: 0;">Select atleast 1 player</p>
+                            </div>
+                        </div>
+                    
+                </div>
+
+                <!-- Add Match Button -->
+                <div class="row my-5 form-group">
+                    <button class="btn btn-danger mx-auto" [disabled]="addMatchForm.controls.players.errors || addMatchForm.controls.result.errors || addMatchForm.controls.score.errors || addMatchForm.controls.datetime.errors || addMatchForm.controls.teamNames.errors || addMatchForm.controls.place.errors">Add Match</button>
+                </div>
+                
+              </form>
+         </div>
+         
+     </div>
+</div>
+
