@@ -19,6 +19,5 @@ export class HomePageComponent implements OnInit {
   }
 
   navigateToRegister(){
-    this.router.navigateByUrl('/register');
   }
 }

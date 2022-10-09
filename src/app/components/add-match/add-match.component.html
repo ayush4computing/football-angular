@@ -76,7 +76,7 @@
 
                         <div class="form-check form-check-inline" *ngFor="let p of players">
                             <input class="mx-2 form-check-input form-control" type="checkbox" id="playersCheckbox" value="p.id" formControlName="players" [ngClass]="{'is-invalid':submitted && addMatchForm.controls.players.errors}">
-                            <label class="form-check-label" for="playersCheckbox" style="color: #fff;">{{p.firstName}} &nbsp; {{p.lastname}}</label>
+                            <label class="form-check-label" for="playersCheckbox" style="color: #fff;"><span class="first-name"></span> &nbsp; <span class=""last-name></span></label>
                         </div>
                         <div *ngIf="addMatchForm.controls.players.touched && addMatchForm.controls.players.errors" class="text-danger">
                             <div *ngIf="addMatchForm.controls.players.touched && addMatchForm.controls.players.errors.required">

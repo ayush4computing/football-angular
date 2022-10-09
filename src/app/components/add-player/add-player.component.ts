@@ -28,15 +28,11 @@ export class AddPlayerComponent implements OnInit {
   }
 
   onSubmit(){
-    this.submitted = true
     if(this.registerForm?.invalid){
       return
     }else{
-      // console.log(this.registerForm.value.jNumber)
       this.playerService.addPlayer(this.registerForm?.value);
-      this.router.navigate([
-        ''
-      ]);
+      
     }
   }
 

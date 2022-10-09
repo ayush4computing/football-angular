@@ -29,6 +29,14 @@ describe('MatchDetailComponent', () => {
         jerseyNumber: '99',
         id: 1,
         position: 'Forward'
+      },
+
+      {
+        firstName: 'Adam',
+        lastname: 'Blake',
+        jerseyNumber: '99',
+        id: 2,
+        position: 'Forward'
       }
     ];
     match = {
@@ -47,7 +55,7 @@ describe('MatchDetailComponent', () => {
     const matchDetailsInstance = matchDetailsFixture.componentInstance;
     matchDetailsInstance.match = match;
     matchDetailsFixture.detectChanges();
-    expect(matchDetailsFixture.debugElement.queryAll(By.css('.player-name')).length).toEqual(1);
+    expect(matchDetailsFixture.debugElement.queryAll(By.css('.player-name')).length).toEqual(2);
   });
 
   it('Display match date on match details page', () => {

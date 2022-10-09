@@ -24,9 +24,7 @@ export class MatchPageComponent implements OnInit {
   }
 
   viewMatchDetails(id: number){
-    this.router.navigate([
-      '/match-detail/'+id
-    ]);
+    
   }
 
 

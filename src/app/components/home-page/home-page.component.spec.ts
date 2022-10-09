@@ -73,7 +73,7 @@ describe('HomePageComponent', () => {
     expect((matchDate.textContent as string).trim()).toBe('Forward');
   });
 
-  it('View details should navigate to details page', () => {
+  it('navigateToRegister() should navigate to Add Player page', () => {
     const HomePageFixture = TestBed.createComponent(HomePageComponent);
     const HomePageInstance = HomePageFixture.componentInstance;
     const navigateSpy = spyOn(router, 'navigateByUrl');

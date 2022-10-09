@@ -3,16 +3,16 @@
         <p>{{team[0]}}&nbsp; &nbsp;{{ score[0]}} &nbsp;&nbsp;- &nbsp;&nbsp;{{score[1]}} &nbsp;&nbsp;{{team[1]}}</p>
     </div>
     <div class="row match-details">
-        <div class="row match-date mt-3"><p class="match-date">{{match.datetime}}</p></div>
-        <div class="row match-loc"><p class="match-place">{{match.place}}</p></div>
+        <div class="row match-date mt-3"><p class="match-date"></p></div>
+        <div class="row match-loc"><p class="match-place"></p></div>
     </div>
     <div class="row players-title">
         <p>Players</p>
     </div>
     <div class="row">
         <div class="col">
-        <div class="row player-name my-3" *ngFor="let p of match.players">
-            <p class="my-auto py-1"> <span class="player-jersey-num">{{p.jerseyNumber}}</span> &nbsp; | &nbsp; {{p.firstName}} &nbsp; {{p.lastname}}</p>
+        <div class="row player-name my-3" >
+            <p class="my-auto py-1"> <span class="player-jersey-num"> </span> &nbsp; | &nbsp; <span class="player-first-name"></span> &nbsp; <span class="player-last-name"></span></p>
         </div>
         
     </div>
