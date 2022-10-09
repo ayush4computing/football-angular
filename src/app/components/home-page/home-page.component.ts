@@ -1,4 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Player } from 'src/app/model/player';
 import { PlayerService } from 'src/app/service/player-service';
 
@@ -10,11 +11,14 @@ import { PlayerService } from 'src/app/service/player-service';
 export class HomePageComponent implements OnInit {
 
   players: Player[] = [];
-  constructor(@Inject(PlayerService) private playerService:PlayerService) {
+  constructor(@Inject(PlayerService) private playerService:PlayerService, private router: Router) {
     this.players = this.playerService.getAllPlayers();
    }
 
   ngOnInit(): void {
   }
 
+  navigateToRegister(){
+    this.router.navigateByUrl('/register');
+  }
 }

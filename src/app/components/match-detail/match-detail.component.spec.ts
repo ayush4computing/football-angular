@@ -42,15 +42,7 @@ describe('MatchDetailComponent', () => {
     };
   });
 
-//   it('Display players on home page', () => {
-//     const homePageFixture = TestBed.createComponent(HomePageComponent);
-//     const homePageInstance = homePageFixture.componentInstance;
-//     homePageInstance.players = players;
-//     homePageFixture.detectChanges();
-//     expect(homePageFixture.debugElement.queryAll(By.css('.card-body')).length).toEqual(1);
-//   });
-
-  it('Display matches on match details page', () => {
+  it('Display player names on match details page', () => {
     const matchDetailsFixture = TestBed.createComponent(MatchDetailComponent);
     const matchDetailsInstance = matchDetailsFixture.componentInstance;
     matchDetailsInstance.match = match;
@@ -58,34 +50,32 @@ describe('MatchDetailComponent', () => {
     expect(matchDetailsFixture.debugElement.queryAll(By.css('.player-name')).length).toEqual(1);
   });
 
-//   it('Add Match button disabled untill form valid', () => {
-//     const addMatchFixture = TestBed.createComponent(AddMatchComponent);
-//     const addMatchInstance = addMatchFixture.componentInstance
-//     addMatchFixture.detectChanges();
-//     expect(addMatchFixture.debugElement.query(By.css('.btn')).nativeElement.disabled).toBeTruthy();
-//     addMatchInstance.addMatchForm.controls['teamNames'].setValue('Liverpool,Real Madrid');
-//     addMatchInstance.addMatchForm.controls['place'].setValue('Anfield, Liverpool, England');
-//     addMatchInstance.addMatchForm.controls['datetime'].setValue('2022-01-20');
-//     addMatchInstance.addMatchForm.controls['score'].setValue('1,2');
-//     addMatchInstance.addMatchForm.controls['result'].setValue('won');
-//     addMatchInstance.addMatchForm.controls['players'].setValue(['Lionel Messi']);
-//     addMatchFixture.detectChanges();
-//     expect(addMatchFixture.debugElement.query(By.css('.btn')).nativeElement.disabled).toBeFalsy();
-//   });
+  it('Display match date on match details page', () => {
+    const matchDetailsFixture = TestBed.createComponent(MatchDetailComponent);
+    const matchDetailsInstance = matchDetailsFixture.componentInstance;
+    matchDetailsInstance.match = match;
+    matchDetailsFixture.detectChanges();
+    const matchDate = matchDetailsFixture.nativeElement.querySelector('.match-date');
+    expect((matchDate.textContent as string).trim()).toBe('20-05-2022 12:00:00');
+  });
 
-//   it('Add Player button disabled untill form valid', () => {
-//     const addPlayerFixture = TestBed.createComponent(AddPlayerComponent);
-//     const addPlayerInstance = addPlayerFixture.componentInstance
-//     addPlayerFixture.detectChanges();
-//     expect(addPlayerFixture.debugElement.query(By.css('.btn')).nativeElement.disabled).toBeTruthy();
-//     addPlayerInstance.registerForm.controls['firstName'].setValue('Jane');
-//     addPlayerInstance.registerForm.controls['lastName'].setValue('Heard');
-//     addPlayerInstance.registerForm.controls['position'].setValue('Middle');
-//     addPlayerInstance.registerForm.controls['jNumber'].setValue('1');
-//     addPlayerFixture.detectChanges();
-//     expect(addPlayerFixture.debugElement.query(By.css('.btn')).nativeElement.disabled).toBeFalsy();
-//   });
+  it('Display match place on match details page', () => {
+    const matchDetailsFixture = TestBed.createComponent(MatchDetailComponent);
+    const matchDetailsInstance = matchDetailsFixture.componentInstance;
+    matchDetailsInstance.match = match;
+    matchDetailsFixture.detectChanges();
+    const matchDate = matchDetailsFixture.nativeElement.querySelector('.match-place');
+    expect((matchDate.textContent as string).trim()).toBe('Anfield, Liverpool, England');
+  });
 
-  
+  it('Display players jersey number on match details page', () => {
+    const matchDetailsFixture = TestBed.createComponent(MatchDetailComponent);
+    const matchDetailsInstance = matchDetailsFixture.componentInstance;
+    matchDetailsInstance.match = match;
+    matchDetailsFixture.detectChanges();
+    const matchDate = matchDetailsFixture.nativeElement.querySelector('.player-jersey-num');
+    expect((matchDate.textContent as string).trim()).toBe('99');
+  });
+
 
 });

@@ -7,15 +7,15 @@
 
     <div class="card mx-3 my-5" *ngFor="let p of players;" style="width: 15rem;">
         <div class="card-body">
-          <h5 class="card-title text-center">{{p.firstName}} </h5>
-          <h5 class="card-title text-center">{{p.lastname}} </h5>
-          <h5 class="card-text text-center">{{p.jerseyNumber}}</h5>
-          <h5 class="card-title text-center">{{p.position}}</h5>
+          <h5 class="card-title text-center player-first-name">{{p.firstName}} </h5>
+          <h5 class="card-title text-center player-last-name">{{p.lastname}} </h5>
+          <h5 class="card-text text-center player-jersey-number">{{p.jerseyNumber}}</h5>
+          <h5 class="card-title text-center player-position">{{p.position}}</h5>
         </div>
       </div>
     </div>
     <div class="row my-5 ">
-        <button type="button" class="btn btn-danger mx-auto" routerLink='/register'>Add Player</button>
+        <button type="button" class="btn btn-danger mx-auto" (click)="navigateToRegister()">Add Player</button>
     </div>
 </div>
 

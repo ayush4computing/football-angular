@@ -9,7 +9,9 @@ export class MatchService{
     match!:Match
     
     addMatch(value: any) {
-
+        if(!value){
+            return
+        }
         this.match = new Match(this.matches.length,value.teamNames,value.place,value.datetime,value.score,value.result,[])
 
         this.matches.push(this.match)

@@ -9,7 +9,9 @@ export class PlayerService{
     player!: Player
     
     addPlayer(value: any) {
-        
+        if(!value){
+        return
+        }
         this.player = new Player(this.players.length,value.firstName,value.lastName,value.position,value.jNumber);
         
         this.players.push(this.player)

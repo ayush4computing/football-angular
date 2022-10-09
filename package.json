@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0 --port 9090 --disable-host-check",
     "build": "ng build",
-    "test": "ng test",
+    "background-tests": "ng test --include **/add-match/*.spec.ts --include **/add-player/*.spec.ts --include **/home-page/*.spec.ts --include **/match-detail/*.spec.ts --include **/match-page/*.spec.ts",
+    "sample-tests": "ng test --include **/app/*.spec.ts",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

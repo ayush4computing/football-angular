@@ -41,12 +41,11 @@ export class AddMatchComponent implements OnInit {
 
   addMatch(){
     this.submitted = true
-    if(this.addMatchForm.invalid){
+    if(this.addMatchForm?.invalid){
       return
     }else{
 
-      this.matchService.addMatch(this.addMatchForm.value);
-      console.log(this.addMatchForm.value)
+      this.matchService.addMatch(this.addMatchForm?.value);
       
     }
 
