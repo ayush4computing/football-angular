@@ -1,115 +1,36 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome Headless 107.0.5296.0 (Linux x86_64)" package="unit" timestamp="2022-10-09T18:50:36" id="0" hostname="ayush4compu-footballang-rnrm8bjh10f" tests="12" errors="0" failures="12" time="0.255">
+<testsuite name="Chrome Headless 107.0.5296.0 (Linux x86_64)" package="unit" timestamp="2022-10-09T19:02:51" id="0" hostname="ayush4compu-footballang-rnrm8bjh10f" tests="4" errors="0" failures="4" time="0.204">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/107.0.5296.0 Safari/537.36"/>
   </properties>
-  <testcase name="MatchDetailComponent Display match place on match details page" time="0.114" classname=".MatchDetailComponent">
-    <failure type="">Error: Expected '' to be 'Anfield, Liverpool, England'.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/match-detail/match-detail.component.spec.ts:76:54)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="MatchDetailComponent Display players jersey number on match details page" time="0.009" classname=".MatchDetailComponent">
-    <failure type="">Error: Expected '' to be '99'.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/match-detail/match-detail.component.spec.ts:85:54)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="MatchDetailComponent Display match date on match details page" time="0.005" classname=".MatchDetailComponent">
-    <failure type="">Error: Expected '' to be '20-05-2022 12:00:00'.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/match-detail/match-detail.component.spec.ts:67:54)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="MatchDetailComponent Display player names on match details page" time="0.007" classname=".MatchDetailComponent">
+  <testcase name="AppComponent Display players on home page" time="0.144" classname=".AppComponent">
     <failure type="">Error: Expected 1 to equal 2.
     at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/match-detail/match-detail.component.spec.ts:58:86)
+    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:66:80)
     at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
     at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
 </failure>
   </testcase>
-  <testcase name="HomePageComponent navigateToRegister() should navigate to Add Player page" time="0.017" classname=".HomePageComponent">
-    <failure type="">Expected spy navigateByUrl to have been called with:
-  [ '/register' ]
-but it was never called.
-Error: Expected spy navigateByUrl to have been called with:
-  [ '/register' ]
-but it was never called.
+  <testcase name="AppComponent Add Match button disabled untill form valid" time="0.04" classname=".AppComponent">
+    <failure type="">Error: Expected false to be truthy.
     at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/home-page/home-page.component.spec.ts:81:25)
+    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:81:87)
     at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
     at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
 </failure>
   </testcase>
-  <testcase name="HomePageComponent Display player position on home page" time="0.007" classname=".HomePageComponent">
-    <failure type="">Error: Expected '' to be 'Forward'.
+  <testcase name="AppComponent Add Player button disabled untill form valid" time="0.014" classname=".AppComponent">
+    <failure type="">Error: Expected false to be truthy.
     at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/home-page/home-page.component.spec.ts:73:54)
+    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:96:88)
     at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
     at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
 </failure>
   </testcase>
-  <testcase name="HomePageComponent Display player first name on home page" time="0.005" classname=".HomePageComponent">
-    <failure type="">Error: Expected '' to be 'John'.
+  <testcase name="AppComponent Display matches on match details page" time="0.006" classname=".AppComponent">
+    <failure type="">Error: Expected 1 to equal 2.
     at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/home-page/home-page.component.spec.ts:55:54)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="HomePageComponent Display player jersey number on home page" time="0.005" classname=".HomePageComponent">
-    <failure type="">Error: Expected '' to be '99'.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/home-page/home-page.component.spec.ts:64:54)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="MatchPageComponent viewMatchDetails() should navigate to respective match details page" time="0.012" classname=".MatchPageComponent">
-    <failure type="">Expected spy navigate to have been called with:
-  [ [ '/match-detail/1' ] ]
-but it was never called.
-Error: Expected spy navigate to have been called with:
-  [ [ '/match-detail/1' ] ]
-but it was never called.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/match-page/match-page.component.spec.ts:54:25)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="AddPlayerComponent onSubmit() should navigate to home page on success" time="0.028" classname=".AddPlayerComponent">
-    <failure type="">Expected spy navigate to have been called with:
-  [ [ '' ] ]
-but it was never called.
-Error: Expected spy navigate to have been called with:
-  [ [ '' ] ]
-but it was never called.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/add-player/add-player.component.spec.ts:64:25)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="AddPlayerComponent onSubmit() should submit the form" time="0.015" classname=".AddPlayerComponent">
-    <failure type="">Error: Expected false to equal true.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/add-player/add-player.component.spec.ts:55:41)
-    at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
-</failure>
-  </testcase>
-  <testcase name="AddMatchComponent addMatch() should submit the form" time="0.031" classname=".AddMatchComponent">
-    <failure type="">Error: Expected false to equal true.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/components/add-match/add-match.component.spec.ts:53:32)
+    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:74:86)
     at _ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:372:1)
     at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:303:1)
 </failure>
