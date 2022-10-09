@@ -37,6 +37,14 @@ describe('AppComponent', () => {
         jerseyNumber: '99',
         id: 1,
         position: 'Forward'
+      },
+
+      {
+        firstName: 'Adam',
+        lastname: 'Blake',
+        jerseyNumber: '99',
+        id: 1,
+        position: 'Forward'
       }
     ];
     match = {
@@ -55,7 +63,7 @@ describe('AppComponent', () => {
     const homePageInstance = homePageFixture.componentInstance;
     homePageInstance.players = players;
     homePageFixture.detectChanges();
-    expect(homePageFixture.debugElement.queryAll(By.css('.card-body')).length).toEqual(1);
+    expect(homePageFixture.debugElement.queryAll(By.css('.card-body')).length).toEqual(2);
   });
 
   it('Display matches on match details page', () => {
@@ -63,7 +71,7 @@ describe('AppComponent', () => {
     const matchDetailsInstance = matchDetailsFixture.componentInstance;
     matchDetailsInstance.match = match;
     matchDetailsFixture.detectChanges();
-    expect(matchDetailsFixture.debugElement.queryAll(By.css('.player-name')).length).toEqual(1);
+    expect(matchDetailsFixture.debugElement.queryAll(By.css('.player-name')).length).toEqual(2);
   });
 
   it('Add Match button disabled untill form valid', () => {

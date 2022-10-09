@@ -1,12 +1,20 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome Headless 107.0.5296.0 (Linux x86_64)" package="unit" timestamp="2022-10-09T18:52:44" id="0" hostname="ayush4compu-footballang-rnrm8bjh10f" tests="4" errors="0" failures="0" time="0.169">
+<testsuite name="Chrome Headless 107.0.5296.0 (Linux x86_64)" package="unit" timestamp="2022-10-09T19:04:17" id="0" hostname="ayush4compu-footballang-rnrm8bjh10f" tests="12" errors="0" failures="0" time="0.204">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/107.0.5296.0 Safari/537.36"/>
   </properties>
-  <testcase name="AppComponent Display players on home page" time="0.113" classname=".AppComponent"/>
-  <testcase name="AppComponent Add Match button disabled untill form valid" time="0.036" classname=".AppComponent"/>
-  <testcase name="AppComponent Display matches on match details page" time="0.009" classname=".AppComponent"/>
-  <testcase name="AppComponent Add Player button disabled untill form valid" time="0.011" classname=".AppComponent"/>
+  <testcase name="MatchPageComponent viewMatchDetails() should navigate to respective match details page" time="0.059" classname=".MatchPageComponent"/>
+  <testcase name="HomePageComponent Display player position on home page" time="0.02" classname=".HomePageComponent"/>
+  <testcase name="HomePageComponent Display player jersey number on home page" time="0.007" classname=".HomePageComponent"/>
+  <testcase name="HomePageComponent View details should navigate to details page" time="0.005" classname=".HomePageComponent"/>
+  <testcase name="HomePageComponent Display player first name on home page" time="0.005" classname=".HomePageComponent"/>
+  <testcase name="MatchDetailComponent Display player names on match details page" time="0.014" classname=".MatchDetailComponent"/>
+  <testcase name="MatchDetailComponent Display players jersey number on match details page" time="0.005" classname=".MatchDetailComponent"/>
+  <testcase name="MatchDetailComponent Display match place on match details page" time="0.004" classname=".MatchDetailComponent"/>
+  <testcase name="MatchDetailComponent Display match date on match details page" time="0.006" classname=".MatchDetailComponent"/>
+  <testcase name="AddPlayerComponent onSubmit() should navigate to home page on success" time="0.028" classname=".AddPlayerComponent"/>
+  <testcase name="AddPlayerComponent onSubmit() should submit the form" time="0.019" classname=".AddPlayerComponent"/>
+  <testcase name="AddMatchComponent addMatch() should submit the form" time="0.032" classname=".AddMatchComponent"/>
   <system-out>
     <![CDATA[
 ]]>
